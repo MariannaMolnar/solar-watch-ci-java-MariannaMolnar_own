@@ -1,5 +1,6 @@
 package com.codecool.solarwatch;
 
+import jakarta.transaction.Transactional;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
@@ -19,6 +20,7 @@ public class UserRegistrationTest {
   @Autowired
   private MockMvc mockMvc;
 
+  @Transactional
   @Test
   void shouldRegisterUserSuccessfully() throws Exception {
     String userJson = """
