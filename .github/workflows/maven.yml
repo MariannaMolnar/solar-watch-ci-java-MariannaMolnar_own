@@ -30,8 +30,8 @@ jobs:
         cache: maven
     - name: Build with Maven
       env:
-        JWT_SECRET: ${{ variables.JWT_SECRET }}
-        API_KEY: ${{ variables.API_KEY }}
+        JWT_SECRET: ${{ secrets.JWT_SECRET }}
+        API_KEY: ${{ secrets.API_KEY }}
       run: mvn -B package --file backend/pom.xml
 
     # Optional: Uploads the full dependency graph to GitHub to improve the quality of Dependabot alerts this repository can receive
