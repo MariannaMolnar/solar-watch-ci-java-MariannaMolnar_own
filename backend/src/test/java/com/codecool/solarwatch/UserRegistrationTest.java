@@ -23,7 +23,7 @@ public class UserRegistrationTest {
   void shouldRegisterUserSuccessfully() throws Exception {
     String userJson = """
             {
-            "username": "testUser",
+            "username": "testUser2",
             "password": "password"
             }
             """;
